@@ -6,11 +6,20 @@ RAIN_LATER = "rain_later"
 leds = {RAIN: LED(4) }##, RAIN_LATER: LED(5)}
 
 def activate(key):
-	leds[key].on()
+	try:
+		leds[key].on()
+	except:
+		print "Warning: LED is probably disconnected"
 
 def deactivate(key):
-	leds[key].off()
+	try:
+		leds[key].off()
+	except:
+		print "Warning: LED is probably disconnected"
 
 def is_active(key):
-	return leds[key].is_active
+	try:
+		return leds[key].is_active
+	except:
+		pass
 

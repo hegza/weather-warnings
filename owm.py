@@ -13,6 +13,12 @@ def read_file(filename):
 city_id = read_file('data/city_id.txt')
 api_key = read_file('data/openweathermap.key')
 
+if (city_id == ""):
+	print "Your city ID has not been set. Please create a file in data/city_id.txt with your city ID. Check out openweathermap.org for the list of city id's."
+
+if (api_key == ""):
+	print "Your API key has not been set. Please create a file in data/openweathermap.key with your api.openweathermap.org API key."
+
 last_cache_time = 0
 cached_weather = ""
 cached_forecast = ""

@@ -58,7 +58,7 @@ def step():
 
 		print "Rain amounts for the 0..3, 3..6, and 6..9 h ranges: " + str(rain_forecast_0) + " " + str(rain_forecast_3) + " " + str(rain_forecast_6) + " (mms)"
 
-		if (rain_forecast_0 >= 1.0 or rain_forecast_3 >= 1.0 or rain_forecast_6 >= 1.0):
+		if (rain_forecast_0 >= 0.65 or rain_forecast_3 >= 0.75 or rain_forecast_6 >= 0.85):
 			update_led("rain", True, "Forecast: rain in the next 9 hours.")
 		else:
 			update_led("rain", False, "Forecast: no rain in the next 9 hours.")
