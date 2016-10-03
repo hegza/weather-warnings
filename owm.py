@@ -90,7 +90,6 @@ def get_weather_now():
 
 def make_request():
 	url = 'http://api.openweathermap.org/data/2.5/weather?id=%s&APPID=%s' % (city_id, api_key)
-	## url = 'http://api.openweathermap.org/data/2.5/weather?lat=%d&lon=%d&APPID=%s' % (24, 61, api_key)
 	print "Info: sending request to " + url
 	try:
 		r = requests.get( url )
@@ -102,7 +101,6 @@ def make_request():
 	return weather_json
 
 def make_request_forecast():	
-	## url = 'http://api.openweathermap.org/data/2.5/forecast?id=%s&APPID=%s' % (city_id, api_key) ## Can't use this for some reason. Returns no data on Pohjois-Hervanta.
 	url = 'http://api.openweathermap.org/data/2.5/forecast?lat=%f&lon=%f&APPID=%s' % (61.457722, 23.847111, api_key)
 	print "Info: sending request to " + url
 	try:
