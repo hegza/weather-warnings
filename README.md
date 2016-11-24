@@ -2,7 +2,7 @@
 A small Internet weather app with GPIO LED's for Raspberry Pi, implemented
 using Python 2.7.8.
 
-The application polls the [openweathermap](https://openweathermap.org/) api and lights a LED if it's going to
+The application polls the [openweathermap](https://openweathermap.org/) api and lights up a LED if it's going to
 be raining in the next few hours.
 
 
